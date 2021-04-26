@@ -169,6 +169,52 @@ Special
 const surveillanceCamera = 'surveillance camera'
 const snare = 'snare'
 const mouseTrap = 'mouse trap'
+const telephotoCamera = {
+    surveillanceCamera,
+    binoculars
+}
+const c4 = {
+    pianoWire,
+    gunpowder,
+    scrapMetal,
+    chalk,
+    stone
+}
+const doubleGuillotine = {
+    mouseTrap,
+    rustySword,
+    snare,
+    bamboo,
+    hatchet
+}
+const claymore = {
+    snare,
+    glue,
+    gunpowder,
+    mouseTrap
+}
+const stingburst = {
+    pianoWire,
+    gunpowder,
+    scrapMetal,
+    mouseTrap,
+    nail
+}
+const remoteMine = {
+    treeOfLife,
+    stone,
+    meteorite,
+    mouseTrap,
+    nail
+}
+const smartBomb = {
+    pianoWire,
+    gunpowder,
+    scrapMetal,
+    fountainPen,
+    paper,
+    battery
+}
 
 /*
 Greens
@@ -266,6 +312,98 @@ const signedBall = {
     fountainPen
 }
 
+//Shuriken
+const dart = {
+    needle,
+    feather
+}
+const vintageCards = {
+    playingCards,
+    fountainPen
+}
+const onyxDagger = {
+    razor,
+    cross
+}
+const throwingStars = {
+    razor,
+    pianoWire
+}
+
+//Bow
+const woodenBow = {
+    branch,
+    pianoWire
+}
+const longbow = {
+    bow,
+    rubber
+}
+
+//Crossbow
+const longCrossbow = {
+    shortCrossbow,
+    pianoWire
+}
+const crossbow = {
+    shortCrossbow,
+    bamboo
+}
+
+//Glove
+const leatherGlove = {
+    cottonGlove,
+    leather
+}
+const ironKnuckles = {
+    brassKnuckles,
+    ironOre
+}
+
+//Tonfa
+const tonfa = {
+    bamboo,
+    branch
+}
+
+//Guitar
+const goldenGuitar = {
+    starterGuitar,
+    pickaxe,
+    gemstone
+}
+const singleCoilPickup = {
+    starterGuitar,
+    battery,
+    water
+}
+
+//Nunchaku
+const nunchaku = {
+    steelChain,
+    scrapMetal
+}
+
+//Whip
+const ropeCuffs = {
+    whip,
+    stallionMedal
+}
+const bullwhip = {
+    whip,
+    razor
+}
+
+//Head
+
+//Chest
+
+//Arm
+
+//Leg
+
+//Accessory
+
 /*
 TMP fnc
 */
@@ -287,38 +425,4 @@ function getRecipe(item) {
         result[key] = item[key]
     }
     return result
-}
-
-function areasWithItem(item) {
-    let result = []
-    for (let key in areas) {
-        for (let key2 in areas[key]) {
-            let obj = areas[key]
-            if (item === obj[key2]) {
-                result[key] = areas[key].ID
-            }
-        }
-    }
-    return result
-}
-
-function areasWithRecipe(item) {
-    let result = []
-    for (let key in areas) {
-        for (let key2 in item) {
-            for (let key3 in areas[key]) {
-                let obj = areas[key]
-                if (item[key2] === obj[key3]) {
-                    result[key] = areas[key].ID
-                    break
-                }
-            }
-        }
-    }
-    return result
-}
-
-function omit(key, obj) {
-    const { [key]: omitted, ...rest } = obj
-    return rest
 }

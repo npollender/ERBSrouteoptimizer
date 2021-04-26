@@ -4,13 +4,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style></style>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>ERBS Tool</title>
 </head>
 <body>
     <script src="items.js"></script>
     <script src="map.js"></script>
-    <script src="images.js"></script>
-    <img src="img/Fragarach.png" alt="fragarach" onclick="alert(getRecipe(roseKnife))">
+    <script src="funcs.js"></script>
+
+    <h1>Eternal Return Item Finder</h1>
+    <h2>Click on an item to find out where to find it.</h2>
+    <p>Materials</p>
+    <img src="img/mats/Alcohol.png" alt="" onclick="swal('You can find me here:', parseArr(whereToFind(alcohol)), 'img/mats/Alcohol.png')">
+    <img src="img/mats/Battery.png" alt="" onclick="swal('You can find me here:', parseArr(whereToFind(battery)), 'img/mats/Battery.png')">
+    <img src="img/mats/Can.png" alt="" onclick="swal('You can find me here:', parseArr(whereToFind(can)), 'img/mats/Can.png')">
+    <img src="img/mats/Cloth.png" alt="" onclick="swal('You can find me here:', parseArr(whereToFind(cloth)), '')">
+    <img src="img/mats/Gemstone.png" alt="" onclick="swal('You can find me here:', parseArr(whereToFind(gemstone)), '')">
+    <img src="img/mats/Glass_Bottle.png" alt="" onclick="swal('You can find me here:', parseArr(whereToFind(glassBottle)), '')">
+    <img src="img/mats/Glue.png" alt="" onclick="swal('You can find me here:', parseArr(whereToFind(glue)), '')">
+    <img src="img/mats/Gunpowder.png" alt="" onclick="swal('You can find me here:', parseArr(whereToFind(gunpowder)), '')">
+    <img src="img/mats/Iron_Ore.png" alt="" onclick="swal('You can find me here:', parseArr(whereToFind(ironOre)), '')">
+    <img src="img/mats/Laser_Pointer.png" alt="" onclick="swal('You can find me here:', parseArr(whereToFind(laserPointer)), '')">
+    <img src="img/mats/Leather.png" alt="" onclick="swal('You can find me here:', parseArr(whereToFind(leather)), '')">
+    <img src="img/mats/Lighter.png" alt="" onclick="swal('You can find me here:', parseArr(whereToFind(lighter)), '')">
+    <img src="img/mats/Nail.png" alt="" onclick="swal('You can find me here:', parseArr(whereToFind(nail)), '')">
+    <img src="img/mats/Oil.png" alt="" onclick="swal('You can find me here:', parseArr(whereToFind(oil)), '')">
+    <img src="img/mats/Paper.png" alt="" onclick="swal('You can find me here:', parseArr(whereToFind(paper)), '')">
+    <img src="img/mats/Piano_Wire.png" alt="" onclick="swal('You can find me here:', parseArr(whereToFind(pianoWire)), '')">
+    <img src="img/mats/Rubber.png" alt="" onclick="swal('You can find me here:', parseArr(whereToFind(rubber)), '')">
+    <img src="img/mats/Scrap_Metal.png" alt="" onclick="swal('You can find me here:', parseArr(whereToFind(scrapMetal)), '')">
+    <img src="img/mats/Stallion_Medal.png" alt="" onclick="swal('You can find me here:', parseArr(whereToFind(stallionMedal)), '')">
+    <img src="img/mats/Stone.png" alt="" onclick="swal('You can find me here:', parseArr(whereToFind(stone)), '')">
+    <img src="img/mats/Turtle_Shell.png" alt="" onclick="swal('You can find me here:', parseArr(whereToFind(turtleShell)), '')">
+    <p>Special Items</p>
+    <img src="img/mats/Meteorite.png" alt="" onclick="swal('You can find me here:', parseArr(whereToFind(meteorite)), '')">
+    <img src="img/mats/Mithril.png" alt="" onclick="swal('You can find me here:', parseArr(whereToFind(mithril)), '')">
+    <img src="img/mats/Tree_of_Life.png" alt="" onclick="swal('You can find me here:', parseArr(whereToFind(treeOfLife)), '')">
+    <img src="img/mats/VF_Blood_Sample.png" alt="" onclick="swal('You can find me here:', parseArr(whereToFind(vfBloodSample)), '')">
+    <p>Weapons</p>
+    <img src="img/weaps/Bamboo.png" alt="" onclick="swal('You can find me here:', parseArr(whereToFind(bamboo)), '')">
+    <img src="img/weaps/Baseball.png" alt="">
+    <img src="img/weaps/Bow.png" alt="">
+    <img src="img/weaps/Branch.png" alt="">
+    <img src="img/weaps/Chalk.png" alt="">
+    <img src="img/weaps/Cotton_Work_Glove.png" alt="">
+    <img src="img/weaps/Fedorova.png" alt="">
+    <img src="img/weaps/Fountain_Pen.png" alt="">
+    <img src="img/weaps/Hammer.png" alt="">
+    <img src="img/weaps/Hatchet.png" alt="">
+    <img src="img/weaps/Iron_Ball.png" alt="">
+    <img src="img/weaps/Kitchen_Knife.png" alt="">
+    <img src="img/weaps/Knuckle.png" alt="">
+    <img src="img/weaps/Long_Rifle.png" alt="">
+    <img src="img/weaps/Needle.png" alt="">
+    <img src="img/weaps/Pickaxe.png" alt="">
+    <img src="img/weaps/Playing_Cards.png" alt="">
+    <img src="img/weaps/Razor.png" alt="">
+    <img src="img/weaps/Rusty_Sword.png" alt="">
+    <img src="img/weaps/Scissors.png" alt="">
+    <img src="img/weaps/Short_Crossbow.png" alt="">
+    <img src="img/weaps/Short_Rod.png" alt="">
+    <img src="img/weaps/Short_Spear.png" alt="">
+    <img src="img/weaps/Starter_Guitar.png" alt="">
+    <img src="img/weaps/Steel_Chain.png" alt="">
+    <img src="img/weaps/Walter_PPK.png" alt="">
+    <img src="img/weaps/Whip.png" alt="">
 </body>
 </html>

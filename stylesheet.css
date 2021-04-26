@@ -1,0 +1,35 @@
+body {
+    position: relative;
+    background-color: black;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+h1, h2, .swal-text, .swal-title {
+    font-family: 'Zen Dots', cursive;
+    color: orange;
+    text-align: center;
+}
+
+p {
+    font-family: 'Zen Dots', cursive;
+    color: orange;
+    text-decoration: underline;
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+.swal-modal {
+    background-color: rgb(49, 49, 49);
+    border: 3px solid orange;
+}
+
+.swal-button {
+    background-color: orange;
+    font-family: 'Zen Dots', cursve;
+    border: 0px orange;
+}
